@@ -140,7 +140,7 @@ app.post("/api/newRestaurant", upload, async (req, res) => {
         });
         console.log(email);
         const insertData = await addingNewRestaurant.save();
-        res.status(201).redirect("/addRestaurant");
+        res.status(201).redirect("/");
       } else {
         res.send("password does not match");
       }
